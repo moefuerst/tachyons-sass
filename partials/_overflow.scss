@@ -1,0 +1,27 @@
+/*
+
+    OVERFLOW
+
+*/
+
+@mixin overflow($partials-breakpoint:'') {
+	.overflow-visible#{$partials-breakpoint} { overflow: visible; }
+	.overflow-hidden#{$partials-breakpoint} { overflow: hidden; }
+	.overflow-clip#{$partials-breakpoint} { overflow: clip; }
+	.overflow-scroll#{$partials-breakpoint} { overflow: scroll; }
+	.overflow-auto#{$partials-breakpoint} { overflow: auto; }
+
+	.overflow-x-visible#{$partials-breakpoint} { overflow-x: visible; }
+	.overflow-x-hidden#{$partials-breakpoint} { overflow-x: hidden; }
+	.overflow-x-scroll#{$partials-breakpoint} { overflow-x: scroll; }
+	.overflow-x-auto#{$partials-breakpoint} { overflow-x: auto; }
+
+	.overflow-y-visible#{$partials-breakpoint} { overflow-y: visible; }
+	.overflow-y-hidden#{$partials-breakpoint} { overflow-y: hidden; }
+	.overflow-y-scroll#{$partials-breakpoint} { overflow-y: scroll; }
+	.overflow-y-auto#{$partials-breakpoint} { overflow-y: auto; }
+
+	/* Equivalent to .overflow-y-scroll */
+	.overflow-container#{$partials-breakpoint} { overflow-y: scroll; }
+}
+

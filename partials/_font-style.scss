@@ -1,0 +1,11 @@
+/*
+
+   FONT STYLE
+   Docs: http://tachyons.io/docs/typography/font-style/
+
+*/
+
+@mixin font-style($partials-breakpoint:'') {
+	.i#{$partials-breakpoint}        	{ font-style: italic; }
+	.fs-normal#{$partials-breakpoint}	{ font-style: normal; }
+}

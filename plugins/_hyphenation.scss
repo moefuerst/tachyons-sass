@@ -1,0 +1,44 @@
+/* Hyphenation
+--------------------------------------------------------------------------------------- */
+@mixin hyphenation {
+	.hy-full  {
+	 -webkit-hyphens: auto;
+     -webkit-hyphenate-limit-before: 2;
+     -webkit-hyphenate-limit-after: 3;
+     -webkit-hyphenate-character:"\2010";
+     -webkit-hyphenate-limit-lines: 2;
+     -webkit-hyphenate-limit-chars: 6 2 3;
+     -webkit-hyphenate-limit-last: always;
+     -webkit-hyphenate-limit-zone: 8%;
+
+     -moz-hyphens: auto;
+     -moz-hyphenate-limit-lines: 2;
+     -moz-hyphenate-limit-chars: 6 2 3;
+     -moz-hyphenate-limit-last: always;
+     -moz-hyphenate-limit-zone: 8%;
+
+     -ms-hyphens: auto;
+     -ms-hyphenate-limit-lines: 2;
+     -ms-hyphenate-limit-chars: 6 2 3;
+     -ms-hyphenate-limit-last: always;
+     -ms-hyphenate-limit-zone: 8%;
+
+     hyphens: auto;
+     hyphenate-character:"\2010";
+     hyphenate-limit-lines: 2;
+     hyphenate-limit-chars: 6 2 3;
+     hyphenate-limit-last: always;
+     hyphenate-limit-zone: 8%;
+	}
+
+	.hy-no  {
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
+		 // hyphenate-before:2;
+		 // hyphenate-after:3;
+		 // hyphenate-lines: 3;
+		 // orphans:4;
+	}
+}

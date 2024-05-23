@@ -1,0 +1,50 @@
+/*
+
+	# [ADDON] NUDGE
+	Nudge the position of an element by a pixel or two
+
+	Docs
+	http://tachyons.io/docs/layout/nudge/
+
+	Base
+	- nudge
+	Modifiers
+	- t = top
+	- r = right
+	- b = bottom
+	- l = left
+	- `1`  = literal value 1px
+	- `2`  = literal value 2px
+	- `3`  = literal value 3px
+	- `4`  = literal value 4px
+	- `5`  = literal value 5px
+
+*/
+
+@mixin nudge($partials-breakpoint:'') {
+
+	.nudge-top-1#{$partials-breakpoint} { top: 1px; }
+	.nudge-top-2#{$partials-breakpoint} { top: 2px; }
+	.nudge-top-3#{$partials-breakpoint} { top: 3px; }
+	.nudge-top-4#{$partials-breakpoint} { top: 4px; }
+	.nudge-top-5#{$partials-breakpoint} { top: 5px; }
+
+	.nudge-right-1#{$partials-breakpoint} { right: 1px; }
+	.nudge-right-2#{$partials-breakpoint} { right: 2px; }
+	.nudge-right-3#{$partials-breakpoint} { right: 3px; }
+	.nudge-right-4#{$partials-breakpoint} { right: 4px; }
+	.nudge-right-5#{$partials-breakpoint} { right: 5px; }
+
+	.nudge-bottom-1#{$partials-breakpoint} { bottom: 1px; }
+	.nudge-bottom-2#{$partials-breakpoint} { bottom: 2px; }
+	.nudge-bottom-3#{$partials-breakpoint} { bottom: 3px; }
+	.nudge-bottom-4#{$partials-breakpoint} { bottom: 4px; }
+	.nudge-bottom-5#{$partials-breakpoint} { bottom: 5px; }
+
+	.nudge-left-1#{$partials-breakpoint} { left: 1px; }
+	.nudge-left-2#{$partials-breakpoint} { left: 2px; }
+	.nudge-left-3#{$partials-breakpoint} { left: 3px; }
+	.nudge-left-4#{$partials-breakpoint} { left: 4px; }
+	.nudge-left-5#{$partials-breakpoint} { left: 5px; }
+
+}

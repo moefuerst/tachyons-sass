@@ -1,0 +1,298 @@
+// OpenType Features, https://wakamaifondue.com Style
+
+@mixin opentype {
+
+	:root {
+		--ot-kern: "kern" on;
+		--ot-calt: "calt" on;
+		--ot-aalt: "aalt" off;
+		--ot-case: "case" off;
+		--ot-cv01: "cv01" off;
+		--ot-cv02: "cv02" off;
+		--ot-cv03: "cv03" off;
+		--ot-cv04: "cv04" off;
+		--ot-cv05: "cv05" off;
+		--ot-cv06: "cv06" off;
+		--ot-cv07: "cv07" off;
+		--ot-cv08: "cv08" off;
+		--ot-cv09: "cv09" off;
+		--ot-cv10: "cv10" off;
+		--ot-cv11: "cv11" off;
+		--ot-dlig: "dlig" off;
+		--ot-dnom: "dnom" off;
+		--ot-frac: "frac" off;
+		--ot-numr: "numr" off;
+		--ot-ordn: "ordn" off;
+		--ot-pnum: "pnum" off;
+		--ot-salt: "salt" off;
+		--ot-sinf: "sinf" off;
+		--ot-ss01: "ss01" off;
+		--ot-ss02: "ss02" off;
+		--ot-ss03: "ss03" off;
+		--ot-ss04: "ss04" off;
+		--ot-subs: "subs" off;
+		--ot-sups: "sups" off;
+		--ot-tnum: "tnum" off;
+		--ot-zero: "zero" off;
+		--ot-cpsp: "cpsp" off;
+	}
+
+	 /* If class is applied, update custom property and
+	   apply modern font-variant-* when supported */
+	.ot-kern {
+		--ot-kern: "kern" on;
+	}
+
+	.ot-calt {
+		--ot-calt: "aalt" on;
+	}
+
+	.ot-aalt {
+		--ot-aalt: "aalt" on;
+	}
+
+	.ot-case {
+		--ot-case: "case" on;
+	}
+
+	.ot-dlig {
+		--ot-dlig: "dlig" on;
+	}
+
+	@supports (font-variant-ligatures: discretionary-ligatures) {
+		.ot-dlig {
+			--ot-dlig: "____";
+			font-variant-ligatures: discretionary-ligatures;
+		}
+	}
+
+	.ot-dnom {
+		--ot-dnom: "dnom" on;
+	}
+
+	.ot-frac {
+		--ot-frac: "frac" on;
+	}
+
+	@supports (font-variant-numeric: diagonal-fractions) {
+		.ot-frac {
+			--ot-frac: "____";
+			font-variant-numeric: diagonal-fractions;
+		}
+	}
+
+	.ot-numr {
+		--ot-numr: "numr" on;
+	}
+
+	.ot-ordn {
+		--ot-ordn: "ordn" on;
+	}
+
+	@supports (font-variant-numeric: ordinal) {
+		.ot-ordn {
+			--ot-ordn: "____";
+			font-variant-numeric: ordinal;
+		}
+	}
+
+	.ot-pnum {
+		--ot-pnum: "pnum" on;
+	}
+
+	@supports (font-variant-numeric: proportional-nums) {
+		.ot-pnum {
+			--ot-pnum: "____";
+			font-variant-numeric: proportional-nums;
+		}
+	}
+
+	.ot-salt {
+		--ot-salt: "salt" on;
+	}
+
+	.ot-sinf {
+		--ot-sinf: "sinf" on;
+	}
+
+	.ot-ss01 {
+		--ot-ss01: "ss01" on;
+	}
+
+	.ot-ss02 {
+		--ot-ss02: "ss02" on;
+	}
+
+	.ot-ss03 {
+		--ot-ss03: "ss03" on;
+	}
+
+	.ot-ss04 {
+		--ot-ss04: "ss04" on;
+	}
+
+	.ot-subs {
+		--ot-subs: "subs" on;
+	}
+
+	@supports (font-variant-position: sub) {
+		.ot-subs {
+			--ot-subs: "____";
+			font-variant-position: sub;
+		}
+	}
+
+	.ot-sups {
+		--ot-sups: "sups" on;
+	}
+
+	@supports (font-variant-position: super) {
+		.ot-sups {
+			--ot-sups: "____";
+			font-variant-position: super;
+		}
+	}
+
+	.ot-tnum {
+		--ot-tnum: "tnum" on;
+	}
+
+	@supports (font-variant-numeric: tabular-nums) {
+		.ot-tnum {
+			--ot-tnum: "____";
+			font-variant-numeric: tabular-nums;
+		}
+	}
+
+	.ot-zero {
+		--ot-zero: "zero" on;
+	}
+
+	@supports (font-variant-numeric: slashed-zero) {
+		.ot-zero {
+			--ot-zero: "____";
+			font-variant-numeric: slashed-zero;
+		}
+	}
+
+	.ot-cpsp {
+		--ot-cpsp: "cpsp" on;
+	}
+
+
+	.ot-cv01 {
+		--ot-cv01: "cv01" on;
+	}
+
+	.ot-cv02 {
+		--ot-cv02: "cv02" on;
+	}
+
+	.ot-cv03 {
+		--ot-cv03: "cv03" on;
+	}
+
+	.ot-cv04 {
+		--ot-cv04: "cv04" on;
+	}
+
+	.ot-cv05 {
+		--ot-cv05: "cv05" on;
+	}
+
+	.ot-cv06 {
+		--ot-cv06: "cv06" on;
+	}
+
+	.ot-cv07 {
+		--ot-cv07: "cv07" on;
+	}
+
+	.ot-cv08 {
+		--ot-cv08: "cv08" on;
+	}
+
+	.ot-cv09 {
+		--ot-cv09: "cv09" on;
+	}
+
+	.ot-cv10 {
+		--ot-cv10: "cv10" on;
+	}
+
+	.ot-cv11 {
+		--ot-cv11: "cv11" on;
+	}
+
+
+	/* Apply current state of all custom properties
+	   whenever a class is being applied */
+	.ot-kern,
+	.ot-calt,
+	.ot-aalt,
+	.ot-case,
+	.ot-dlig,
+	.ot-dnom,
+	.ot-frac,
+	.ot-numr,
+	.ot-ordn,
+	.ot-pnum,
+	.ot-salt,
+	.ot-sinf,
+	.ot-ss01,
+	.ot-ss02,
+	.ot-ss03,
+	.ot-ss04,
+	.ot-subs,
+	.ot-sups,
+	.ot-tnum,
+	.ot-zero,
+	.ot-cpsp,
+	.ot-cv01,
+	.ot-cv02,
+	.ot-cv03,
+	.ot-cv04,
+	.ot-cv05,
+	.ot-cv06,
+	.ot-cv07,
+	.ot-cv08,
+	.ot-cv09,
+	.ot-cv10,
+	.ot-cv11
+	 {
+		font-feature-settings:
+			var(--ot-kern),
+			var(--ot-calt),
+			var(--ot-aalt),
+			var(--ot-case),
+			var(--ot-dlig),
+			var(--ot-dnom),
+			var(--ot-frac),
+			var(--ot-numr),
+			var(--ot-ordn),
+			var(--ot-pnum),
+			var(--ot-salt),
+			var(--ot-sinf),
+			var(--ot-ss01),
+			var(--ot-ss02),
+			var(--ot-ss03),
+			var(--ot-ss04),
+			var(--ot-subs),
+			var(--ot-sups),
+			var(--ot-tnum),
+			var(--ot-zero),
+			var(--ot-cpsp),
+			var(--ot-cv01),
+			var(--ot-cv02),
+			var(--ot-cv03),
+			var(--ot-cv04),
+			var(--ot-cv05),
+			var(--ot-cv06),
+			var(--ot-cv07),
+			var(--ot-cv08),
+			var(--ot-cv09),
+			var(--ot-cv10),
+			var(--ot-cv11);
+	}
+
+}

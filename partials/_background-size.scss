@@ -1,0 +1,14 @@
+/*
+
+   BACKGROUND SIZE
+   Docs: http://tachyons.io/docs/themes/background-size/
+
+   Often used in combination with background image set as an inline style
+   on an html element.
+
+*/
+
+@mixin background-size($partials-breakpoint: ''){
+	.cover#{$partials-breakpoint} { background-size: cover!important; }
+	.contain#{$partials-breakpoint} { background-size: contain!important; }
+}

@@ -1,0 +1,40 @@
+/*
+
+  Grid Column
+  Docs: http://tachyons.io/docs/layout/grid-column
+
+  This sets the width of the element via declaring how many columns wide it should be
+
+  Base:
+  col = columns
+
+*/
+
+$grid-columns: 12 !default;
+
+@mixin grid-column($partials-breakpoint:'') {
+
+  @for $i from 1 through $grid-columns {
+	.col-#{$i}#{$partials-breakpoint}  { grid-column: span #{$i} / span #{$i}; }
+  }
+
+  .col-full#{$partials-breakpoint}  { grid-column: 1 / -1; }
+
+  @for $i from 2 through calc($grid-columns / 2) {
+	.col-center#{($i - 1)}#{$partials-breakpoint}  { grid-column: #{$i} / -#{$i}; }
+  }
+
+  .col-auto#{$partials-breakpoint}  { grid-column: auto; }
+
+  @for $i from 1 through ($grid-columns - 1) {
+  	.start-#{$i}#{$partials-breakpoint} { grid-column-start: #{$i}; }
+  }
+
+  @for $i from 1 through $grid-columns {
+  	.end-#{$i}#{$partials-breakpoint} { grid-column-end: #{$i}; }
+  }
+
+
+}
+
+

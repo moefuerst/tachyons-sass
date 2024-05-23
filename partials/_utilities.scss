@@ -1,0 +1,16 @@
+/*
+
+   UTILITIES
+
+*/
+
+@mixin utilities($partials-breakpoint:'') {
+	.center#{$partials-breakpoint} {
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+
+	.mr-auto#{$partials-breakpoint} { margin-right: auto; }
+	.ml-auto#{$partials-breakpoint} { margin-left:  auto; }
+
+}

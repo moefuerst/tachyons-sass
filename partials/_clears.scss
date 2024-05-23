@@ -1,0 +1,13 @@
+/*
+
+   CLEARS
+   http://tachyons.io/docs/layout/clearfix/
+
+*/
+
+@mixin clears($partials-breakpoint:''){
+	.cl#{$partials-breakpoint} { clear: left; }
+	.cr#{$partials-breakpoint} { clear: right; }
+	.cb#{$partials-breakpoint} { clear: both; }
+	.cn#{$partials-breakpoint} { clear: none; }
+}

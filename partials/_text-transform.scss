@@ -1,0 +1,22 @@
+/*
+
+   TEXT TRANSFORM
+   Docs: http://tachyons.io/docs/typography/text-transform/
+
+   Base:
+     tt = text-transform
+
+   Modifiers
+     c = capitalize
+     l = lowercase
+     u = uppercase
+     n = none
+
+*/
+
+@mixin text-transform($partials-breakpoint:'') {
+	.ttc#{$partials-breakpoint} { text-transform: capitalize; }
+	.ttl#{$partials-breakpoint} { text-transform: lowercase; }
+	.ttu#{$partials-breakpoint} { text-transform: uppercase; }
+	.ttn#{$partials-breakpoint} { text-transform: none; }
+}

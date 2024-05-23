@@ -1,0 +1,26 @@
+/*
+
+   BORDER STYLES
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Depends on base border module in _borders.css
+
+   Base:
+     b = border-style
+
+   Modifiers:
+     --none   = none
+     --dotted = dotted
+     --dashed = dashed
+     --solid  = solid
+
+*/
+
+@mixin border-style($partials-breakpoint: ''){
+
+	.b--dotted#{$partials-breakpoint}	{ border-style: dotted; }
+	.b--dashed#{$partials-breakpoint}	{ border-style: dashed; }
+	.b--solid#{$partials-breakpoint}	{ border-style: solid; }
+	.b--none#{$partials-breakpoint}		{ border-style: none; }
+
+}

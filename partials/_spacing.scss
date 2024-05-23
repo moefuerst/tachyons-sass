@@ -1,0 +1,102 @@
+/*
+
+  SPACING
+  Docs: http://tachyons.io/docs/layout/spacing/
+
+  An eight step powers of two scale ranging from 0 to 16rem.
+
+  Base:
+    p = padding
+    m = margin
+    n = negative margin
+
+  Modifiers:
+    a = all
+    h = horizontal
+    v = vertical
+    t = top
+    r = right
+    b = bottom
+    l = left
+
+    0 = 0/none
+    1 = 1st step in spacing scale
+    2 = 2nd step in spacing scale
+    3 = 3rd step in spacing scale
+    4 = 4th step in spacing scale
+    5 = 5th step in spacing scale
+    6 = 6th step in spacing scale
+    7 = 7th step in spacing scale
+
+*/
+
+$spacings: (
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 2rem,
+  5: 4rem,
+  6: 8rem,
+  7: 16rem
+) !default;
+
+$spacing-none: 0 !default;
+
+@mixin spacing($partials-breakpoint:'') {
+
+	.p0#{$partials-breakpoint} { padding: $spacing-none; }
+	.m0#{$partials-breakpoint} { margin: $spacing-none; }
+
+	.ph0#{$partials-breakpoint} { padding-left: $spacing-none; padding-right: $spacing-none; }
+	.mh0#{$partials-breakpoint} { margin-left: $spacing-none; margin-right: $spacing-none; }
+
+	.pv0#{$partials-breakpoint} { padding-top: $spacing-none; padding-bottom: $spacing-none; }
+	.mv0#{$partials-breakpoint} { margin-top: $spacing-none; margin-bottom: $spacing-none; }
+
+	.pt0#{$partials-breakpoint} { padding-top: $spacing-none; }
+	.mt0#{$partials-breakpoint} { margin-top: $spacing-none; }
+
+	.pr0#{$partials-breakpoint} { padding-right: $spacing-none; }
+	.mr0#{$partials-breakpoint} { margin-right: $spacing-none; }
+
+	.pb0#{$partials-breakpoint} { padding-bottom: $spacing-none; }
+	.mb0#{$partials-breakpoint} { margin-bottom: $spacing-none; }
+
+	.pl0#{$partials-breakpoint} { padding-left: $spacing-none; }
+	.ml0#{$partials-breakpoint} { margin-left: $spacing-none; }
+
+	@each $label, $size in $spacings {
+	.p#{$label}#{$partials-breakpoint} { padding: $size; }
+	.m#{$label}#{$partials-breakpoint} { margin: $size; }
+	.n#{$label}#{$partials-breakpoint} { margin: $size * -1; }
+
+	.ph#{$label}#{$partials-breakpoint} { padding-left: $size; padding-right: $size; }
+	.mh#{$label}#{$partials-breakpoint} { margin-left: $size; margin-right: $size; }
+	.nh#{$label}#{$partials-breakpoint} { margin-left: $size; margin-right: $size * -1; }
+
+	.pv#{$label}#{$partials-breakpoint} { padding-top: $size; padding-bottom: $size; }
+	.mv#{$label}#{$partials-breakpoint} { margin-top: $size; margin-bottom: $size; }
+	.nv#{$label}#{$partials-breakpoint} { margin-top: $size; margin-bottom: $size * -1; }
+
+	.pt#{$label}#{$partials-breakpoint} { padding-top: $size; }
+	.mt#{$label}#{$partials-breakpoint} { margin-top: $size; }
+	.nt#{$label}#{$partials-breakpoint} { margin-top: $size * -1; }
+
+	.pr#{$label}#{$partials-breakpoint} { padding-right: $size; }
+	.mr#{$label}#{$partials-breakpoint} { margin-right: $size; }
+	.nr#{$label}#{$partials-breakpoint} { margin-right: $size * -1; }
+
+	.pb#{$label}#{$partials-breakpoint} { padding-bottom: $size; }
+	.mb#{$label}#{$partials-breakpoint} { margin-bottom: $size; }
+	.nb#{$label}#{$partials-breakpoint} { margin-bottom: $size * -1; }
+
+	.pl#{$label}#{$partials-breakpoint} { padding-left: $size; }
+	.ml#{$label}#{$partials-breakpoint} { margin-left: $size; }
+	.nl#{$label}#{$partials-breakpoint} { margin-left: $size * -1; }
+	}
+
+	.nh--screen#{$partials-breakpoint} { margin-left: -50vw; margin-right: -50vw; }
+
+}
+
+

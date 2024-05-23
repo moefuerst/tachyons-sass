@@ -1,0 +1,46 @@
+/*
+
+    BACKGROUND POSITION
+
+    Base:
+    bg = background
+
+    Modifiers:
+    -center = center center
+    -top = top center
+    -right = center right
+    -bottom = bottom center
+    -left = center left
+
+    // removed no-repeat, this is set in general
+
+*/
+
+@mixin background-position($partials-breakpoint: '') {
+
+  .bg-center#{$partials-breakpoint} {
+    //background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .bg-top#{$partials-breakpoint} {
+    //background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .bg-right#{$partials-breakpoint} {
+    //background-repeat: no-repeat;
+    background-position: center right;
+  }
+
+  .bg-bottom#{$partials-breakpoint} {
+    //background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  .bg-left#{$partials-breakpoint} {
+    //background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+}

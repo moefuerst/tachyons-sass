@@ -1,5 +1,4 @@
-// ! TACHYONS v4.9.0 | http://tachyons.io 
-
+/*! TACHYONS v7.0.1-2 | http://tachyons.io */
 //
 //
 //      ________            ______
@@ -9,86 +8,195 @@
 //      /_/    \__,_/ \___/ /_/ /_/_\__, / \____//_/ /_//____/
 //                                 /____/
 //
-//    TABLE OF CONTENTS
-//
-//    1. External Library Includes
-//       - Normalize.css | http://normalize.css.github.io
-//    2. Tachyons Modules
-//    3. Variables
-//       - Media Queries
-//       - Colors
-//    4. Debugging
-//       - Debug all
-//       - Debug children
-//
-//
 
 
- //  External Library Includes 
- @import 'scss/normalize';
+///*  External library includes
+//------------------------------------------------------------------------------------- */
+@use 'vendor/normalize';
+//@use 'vendor/sanitize';
 
 
-//  Variables 
-//  Importing here will allow you to override any variables in the modules 
+///*  Default variables for all settings, colors, sizes and breakpoints
+//------------------------------------------------------------------------------------- */
+@use 'config/defaults' as *;
 
-@import 'scss/variables';
 
-//  Debugging 
-@import 'scss/debug-children';
-@import 'scss/debug-grid';
+///*  Debugging Mixins
+//------------------------------------------------------------------------------------- */
+@use 'debugging/debugging' as debug;
 
-//  Uncomment out the line below to help debug layout issues 
-//  @import 'scss/debug'; 
 
- //  Modules 
- @import 'scss/box-sizing';
- @import 'scss/aspect-ratios';
- @import 'scss/images';
- @import 'scss/background-size';
- @import 'scss/background-position';
- @import 'scss/outlines';
- @import 'scss/borders';
- @import 'scss/border-colors';
- @import 'scss/border-radius';
- @import 'scss/border-style';
- @import 'scss/border-widths';
- @import 'scss/box-shadow';
- @import 'scss/code';
- @import 'scss/coordinates';
- @import 'scss/clears';
- @import 'scss/display';
- @import 'scss/flexbox';
- @import 'scss/floats';
- @import 'scss/font-family';
- @import 'scss/font-style';
- @import 'scss/font-weight';
- @import 'scss/forms';
- @import 'scss/heights';
- @import 'scss/letter-spacing';
- @import 'scss/line-height';
- @import 'scss/links';
- @import 'scss/lists';
- @import 'scss/max-widths';
- @import 'scss/widths';
- @import 'scss/overflow';
- @import 'scss/position';
- @import 'scss/opacity';
- @import 'scss/rotations';
- @import 'scss/skins';
- @import 'scss/skins-pseudo';
- @import 'scss/spacing';
- @import 'scss/negative-margins';
- @import 'scss/tables';
- @import 'scss/text-decoration';
- @import 'scss/text-align';
- @import 'scss/text-transform';
- @import 'scss/type-scale';
- @import 'scss/typography';
- @import 'scss/utilities';
- @import 'scss/visibility';
- @import 'scss/white-space';
- @import 'scss/vertical-align';
- @import 'scss/hovers';
- @import 'scss/z-index';
- @import 'scss/nested';
- @import 'scss/styles';
+///*  Import and configure the Tachyons partials
+//------------------------------------------------------------------------------------- */
+@use 'partials' as * with (
+	$sans-serif: $sans-serif,
+	$serif: $serif,
+	$code: $code,
+	$type-scale: $type-scale,
+	$extra-heading-sizes: $extra-heading-sizes,
+	$line-heights: $line-heights,
+	$measures: $measures,
+	$letter-spacings: $letter-spacings,
+	$spacings: $spacings,
+	$spacings-gap: $spacings,
+	$spacing-none: $spacing-none,
+	$spacing-none-gap: $spacing-none,
+	$heights: $heights,
+	$heights-percentage: $heights-percentage,
+	$widths: $widths,
+	$widths-percentage: $widths-percentage,
+	$max-widths: $max-widths,
+	$grid-columns: $grid-columns,
+	$grid-rows: $grid-rows,
+	$template-columns: $template-columns,
+	$custom-grids: $custom-grids,
+	$content-columns: $content-columns,
+	$aspect-ratios: $aspect-ratios,
+	$colors: $colors,
+    $colors-border: $colors,
+    $colors-skins-pseudo: $colors,
+    $colors-table: $colors,
+	$border-radii: $border-radii,
+	$border-widths: $border-widths,
+	$box-shadows: $box-shadows,
+);
+$partials-breakpoint: '';
+
+@use 'plugins';
+
+
+// Start Print
+
+/*  Debug Partials
+--------------------------------------------------------------------------------------- */
+@include debug.debugChildren;
+@include debug.debugGrid;
+
+//uncomment to help debug layout issues
+//@include debug.debug;
+
+/*  Base Partials
+--------------------------------------------------------------------------------------- */
+@include box-sizing;
+@include aspect-ratios;
+@include images;
+@include background-size;
+@include background-position;
+@include outlines;
+@include borders;
+@include border-colors;
+@include border-radius;
+@include border-style;
+@include border-widths;
+@include box-shadow;
+@include code;
+@include columns;
+@include coordinates;
+@include clearfix;
+@include clears;
+@include flexbox;
+@include display;
+@include floats;
+@include font-family;
+@include font-style;
+@include font-weight;
+@include forms;
+@include gap;
+@include grid-column;
+@include grid-row;
+@include grid-template;
+@include heights;
+@include letter-spacing;
+@include line-height;
+@include links;
+@include lists;
+@include max-widths;
+@include widths;
+@include object-fit;
+@include overflow;
+@include position;
+@include opacity;
+@include rotations;
+@include skins;
+@include skins-pseudo;
+@include spacing;
+@include tables;
+@include text-decoration;
+@include text-align;
+@include text-transform;
+@include type-scale;
+@include typography;
+@include utilities;
+@include visibility;
+@include white-space;
+@include vertical-align;
+@include hovers;
+@include z-index;
+
+
+@include plugins.nested;
+@include plugins.animate;
+@include plugins.background-attachment;
+@include plugins.background-repeat;
+@include plugins.filters;
+@include plugins.gradients;
+@include plugins.hanging-punctuation;
+@include plugins.hyphenation;
+@include plugins.nudge;
+@include plugins.opentype;
+
+
+/*  Breakpoint Partials
+--------------------------------------------------------------------------------------- */
+@each $breakpoint, $media in $breakpoints {
+	@media #{$media} {
+		$partials-breakpoint: '-' + $breakpoint !global;
+
+		@include aspect-ratios($partials-breakpoint);
+		@include background-size($partials-breakpoint);
+		@include background-position($partials-breakpoint);
+		@include outlines($partials-breakpoint);
+		@include borders($partials-breakpoint);
+		@include border-radius($partials-breakpoint);
+		@include border-style($partials-breakpoint);
+		@include border-widths($partials-breakpoint);
+		@include box-shadow($partials-breakpoint);
+		@include columns($partials-breakpoint);
+		@include coordinates($partials-breakpoint);
+		@include clears($partials-breakpoint);
+		@include flexbox($partials-breakpoint);
+		@include display($partials-breakpoint);
+		@include floats($partials-breakpoint);
+		@include font-style($partials-breakpoint);
+		@include font-weight($partials-breakpoint);
+		@include gap($partials-breakpoint);
+		@include grid-column($partials-breakpoint);
+		@include grid-row($partials-breakpoint);
+		@include grid-template($partials-breakpoint);
+		@include heights($partials-breakpoint);
+		@include letter-spacing($partials-breakpoint);
+		@include line-height($partials-breakpoint);
+		@include max-widths($partials-breakpoint);
+		@include widths($partials-breakpoint);
+		@include object-fit($partials-breakpoint);
+		@include overflow($partials-breakpoint);
+		@include position($partials-breakpoint);
+		@include rotations($partials-breakpoint);
+		@include spacing($partials-breakpoint);
+		@include text-decoration($partials-breakpoint);
+		@include text-align($partials-breakpoint);
+		@include text-transform($partials-breakpoint);
+		@include type-scale($partials-breakpoint);
+		@include typography($partials-breakpoint);
+		@include utilities($partials-breakpoint);
+		@include visibility($partials-breakpoint);
+		@include white-space($partials-breakpoint);
+		@include vertical-align($partials-breakpoint);
+
+		@include plugins.nudge($partials-breakpoint);
+
+	}
+}
+
+
+

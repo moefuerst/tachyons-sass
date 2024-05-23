@@ -1,0 +1,35 @@
+/*
+
+   FONT WEIGHT
+   Docs: http://tachyons.io/docs/typography/font-weight/
+
+   Base
+     fw = font-weight
+
+   Modifiers:
+     1 = literal value 100
+     2 = literal value 200
+     3 = literal value 300
+     4 = literal value 400
+     5 = literal value 500
+     6 = literal value 600
+     7 = literal value 700
+     8 = literal value 800
+     9 = literal value 900
+
+*/
+
+@mixin font-weight($partials-breakpoint:'') {
+	.normal#{$partials-breakpoint} { font-weight: normal; }
+	.b#{$partials-breakpoint}      { font-weight: bold; }
+	.fw1#{$partials-breakpoint}    { font-weight: 100; }
+	.fw2#{$partials-breakpoint}    { font-weight: 200; }
+	.fw3#{$partials-breakpoint}    { font-weight: 300; }
+	.fw4#{$partials-breakpoint}    { font-weight: 400; }
+	.fw5#{$partials-breakpoint}    { font-weight: 500; }
+	.fw6#{$partials-breakpoint}    { font-weight: 600; }
+	.fw7#{$partials-breakpoint}    { font-weight: 700; }
+	.fw8#{$partials-breakpoint}    { font-weight: 800; }
+	.fw9#{$partials-breakpoint}    { font-weight: 900; }
+}
+

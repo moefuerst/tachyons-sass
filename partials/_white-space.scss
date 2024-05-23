@@ -1,0 +1,13 @@
+/*
+
+   WHITE SPACE
+
+*/
+
+@mixin white-space($partials-breakpoint:'') {
+
+	.ws-normal#{$partials-breakpoint} { white-space: normal; }
+	.nowrap#{$partials-breakpoint} { 	white-space: nowrap; }
+	.pre#{$partials-breakpoint} { 		white-space: pre; }
+
+}

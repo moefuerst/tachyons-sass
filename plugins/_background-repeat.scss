@@ -1,0 +1,20 @@
+/*
+    BACKGROUND REPEAT
+
+    Base:
+    bg = background
+
+    Modifiers:
+    -fixed
+    -local
+    -scroll
+
+ */
+
+@mixin background-repeat($partials-breakpoint:'') {
+
+  .bg-repeat#{$partials-breakpoint} { background-repeat:  repeat; }
+  .bg-repeat-x#{$partials-breakpoint} { background-repeat:  repeat-x; }
+  .bg-repeat-y#{$partials-breakpoint} { background-repeat:  repeat-y; }
+
+  }

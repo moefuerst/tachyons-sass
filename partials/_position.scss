@@ -1,0 +1,14 @@
+/*
+
+   POSITIONING
+   Docs: http://tachyons.io/docs/layout/position/
+
+*/
+
+@mixin position($partials-breakpoint:'') {
+	.static#{$partials-breakpoint} { position: 	 static; }
+	.relative#{$partials-breakpoint} { position: relative; }
+	.absolute#{$partials-breakpoint} { position: absolute; }
+	.fixed#{$partials-breakpoint}  { position: 	 fixed; }
+	.sticky#{$partials-breakpoint}  { position:  sticky; }
+}

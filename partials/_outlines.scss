@@ -1,0 +1,8 @@
+/*
+   OUTLINES
+*/
+@mixin outlines($partials-breakpoint:''){
+	.outline#{$partials-breakpoint} { outline: 1px solid; }
+	.outline-transparent#{$partials-breakpoint} { outline: 1px solid transparent; }
+	.outline-0#{$partials-breakpoint} { outline: 0; }
+}

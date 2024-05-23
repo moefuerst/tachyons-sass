@@ -1,0 +1,64 @@
+/*
+
+   GAP: GRID AND FLEX SPACING
+   Docs: http://tachyons.io/docs/layout/gap/
+
+   Base:
+     g = gap
+
+
+   Media Query Extensions:
+     -s = small
+     -m  = medium
+     -l  = large
+
+*/
+
+$spacings-gap: (
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 2rem,
+  5: 4rem,
+  6: 8rem,
+  7: 16rem
+) !default;
+
+$spacing-none-gap: 0 !default;
+
+@mixin gap($partials-breakpoint:'') {
+
+  .g0#{$partials-breakpoint} {
+    gap: $spacing-none-gap;
+  }
+
+
+  @each $label, $size in $spacings-gap {
+    .g#{$label}#{$partials-breakpoint} {
+      gap: $size;
+    }
+  }
+
+  .gh0#{$partials-breakpoint} {
+    column-gap: $spacing-none-gap;
+  }
+
+
+  @each $label, $size in $spacings-gap {
+    .gh#{$label}#{$partials-breakpoint} {
+      column-gap: $size;
+    }
+  }
+
+  .gv0#{$partials-breakpoint} {
+    row-gap: $spacing-none-gap;
+  }
+
+
+  @each $label, $size in $spacings-gap {
+    .gv#{$label}#{$partials-breakpoint} {
+      row-gap: $size;
+    }
+  }
+
+}

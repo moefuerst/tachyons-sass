@@ -1,0 +1,17 @@
+/*
+
+   VISIBILITY
+
+   Text that is hidden but accessible
+   Ref: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+*/
+
+@mixin visibility($partials-breakpoint:'') {
+	.clip#{$partials-breakpoint} {
+		position: fixed !important;
+		_position: absolute !important;
+		clip: rect(1px 1px 1px 1px);
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+}

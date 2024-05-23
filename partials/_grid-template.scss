@@ -1,0 +1,41 @@
+/*
+
+  Grid Template
+  Docs: http://tachyons.io/docs/layout/grid-template/
+
+  Base:
+  grid = columns
+
+*/
+
+$template-columns: 6 !default;
+
+$custom-grids: (
+	"cg-2-3": 2fr 1fr 1fr 2fr,
+	"cg-2-5": 2fr 2fr 1fr 1fr 2fr 2fr,
+	"cg-3-4": 3fr 1fr 2fr 2fr 1fr 3fr,
+	"cg-3-5": 3fr 2fr 1fr 3fr 1fr 2fr 3fr,
+	"cg-4-5": 4fr 1fr 3fr 2fr 2fr 3fr 1fr 4fr,
+	"cg-4-6": repeat(2, 2fr 1fr 1fr 2fr),
+	"cg-5-6": 5fr 1fr 4fr 2fr 3fr 3fr 2fr 4fr 1fr 5fr,
+	"masonry": masonry,
+	"subgrid": subgrid
+) !default;
+
+@mixin grid-template($partials-breakpoint:'') {
+
+  @for $i from 1 through $template-columns {
+	.grid-#{$i}#{$partials-breakpoint}  { grid-template-columns: repeat(#{$i}, minmax(0, 1fr)) }
+  }
+
+  /* Compound grids/custom grid template columns */
+  @each $label, $size in $custom-grids{
+	.#{$label}#{$partials-breakpoint} { grid-template-columns: $size; }
+  }
+
+  .template-none#{$partials-breakpoint} { grid-template-columns: none; }
+
+}
+
+
+

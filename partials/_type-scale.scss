@@ -1,0 +1,50 @@
+/*
+
+  TYPE SCALE
+  Docs: http://tachyons.io/docs/typography/scale/
+
+  Base:
+    f = font-size
+
+  Modifiers:
+    0 = 0th step in size scale
+    1 = 1st step in size scale
+    2 = 2nd step in size scale
+    3 = 3rd step in size scale
+    4 = 4th step in size scale
+    5 = 5th step in size scale
+    6 = 6th step in size scale
+    7 = 7th step in size scale
+
+*/
+
+$type-scale: (
+  0: 6rem,
+  1: 4rem,
+  2: 3rem,
+  3: 2rem,
+  4: 1.5rem,
+  5: 1rem,
+  6: 0.875rem,
+  7: .75rem
+) !default;
+
+$extra-heading-sizes: (
+    "headline": 6rem,
+    "subheadline": 4rem,
+) !default;
+
+@mixin type-scale($partials-breakpoint:'') {
+
+  @each $label, $size in $type-scale{
+    .f#{$label}#{$partials-breakpoint} { font-size: $size; }
+  }
+
+  /* Legacy: Hero/Marketing Titles */
+  @each $label, $size in $extra-heading-sizes{
+    @each $sublabel in $label {
+    .f-#{$sublabel}#{$partials-breakpoint} { font-size: $size; }
+    }
+  }
+
+}

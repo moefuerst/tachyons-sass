@@ -1,0 +1,24 @@
+/*
+
+  Grid Row
+  Docs: http://tachyons.io/docs/layout/grid-column-row
+
+  This sets the width of the element via declaring how many columns wide it should be
+
+  Base:
+  row = row
+
+*/
+
+$grid-rows: 12 !default;
+
+@mixin grid-row($partials-breakpoint:'') {
+
+  .row-auto#{$partials-breakpoint}  { grid-row: auto; }
+
+  @for $i from 1 through $grid-rows {
+	.row-start-#{$i}#{$partials-breakpoint}  { grid-row-start: #{$i}; }
+	.row-end-#{$i}#{$partials-breakpoint}  { grid-row-end: #{$i}; }
+  }
+
+}

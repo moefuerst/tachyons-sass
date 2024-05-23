@@ -1,0 +1,12 @@
+/*
+
+   TEXT DECORATION
+   Docs: http://tachyons.io/docs/typography/text-decoration/
+
+*/
+
+@mixin text-decoration($partials-breakpoint:'') {
+	.strike#{$partials-breakpoint}       { text-decoration: line-through; }
+	.underline#{$partials-breakpoint}    { text-decoration: underline; }
+	.no-underline#{$partials-breakpoint} { text-decoration: none; }
+}

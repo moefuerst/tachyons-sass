@@ -1,0 +1,21 @@
+/*
+
+  LINE HEIGHT / Leading
+  Docs: http://tachyons.io/docs/typography/line-height/
+
+  Base:
+    lh = line-height
+
+*/
+
+$line-heights: (
+  "solid": 1,
+  "title": 1.25,
+  "copy": 1.5
+) !default;
+
+@mixin line-height($partials-breakpoint:'') {
+	@each $label, $lh in $line-heights {
+		.lh-#{$label}#{$partials-breakpoint} { line-height: $lh }
+	}
+}

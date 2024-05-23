@@ -1,0 +1,21 @@
+/*
+
+  FILTER EFFECTS
+
+    - Blur
+    - Grayscale
+
+*/
+
+@mixin filters {
+
+	.blur-none { filter: blur(0); }
+	.blur { 	 filter: blur(8px); }
+	.blur-soft { filter: blur(16px); }
+	.blur-max {  filter: blur(40px); }
+
+	.grayscale-0 {  filter: grayscale(0); }
+	.grayscale-50 { filter: grayscale(50%); }
+	.grayscale { 	filter: grayscale(100%); }
+
+}

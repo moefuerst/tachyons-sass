@@ -1,0 +1,20 @@
+/*
+    BACKGROUND ATTACHMENT
+
+    Base:
+    bg = background
+
+    Modifiers:
+    -fixed
+    -local
+    -scroll
+
+ */
+
+@mixin background-attachment($partials-breakpoint:'') {
+
+  .bg-fixed#{$partials-breakpoint} { background-attachment:  fixed; }
+  .bg-local#{$partials-breakpoint} { background-attachment:  local; }
+  .bg-scroll#{$partials-breakpoint} { background-attachment: scroll; }
+
+  }

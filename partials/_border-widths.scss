@@ -1,0 +1,38 @@
+/*
+
+  BORDER WIDTHS
+  Docs: http://tachyons.io/docs/themes/borders/
+
+  Base:
+    bw = border-width
+
+  Modifiers:
+    0 = 0 width border
+    1 = 1st step in border-width scale
+    2 = 2nd step in border-width scale
+    3 = 3rd step in border-width scale
+    4 = 4th step in border-width scale
+    5 = 5th step in border-width scale
+
+*/
+
+$border-widths: (
+  0: 0,
+  1: .125rem,
+  2: .25rem,
+  3: .5rem,
+  4: 1rem,
+  5: 2rem
+) !default;
+
+@mixin border-widths($partials-breakpoint:''){
+	@each $label, $size in $border-widths {
+	.bw#{$label}#{$partials-breakpoint} { border-width: $size; }
+	}
+
+	/* Resets */
+	.bt-0#{$partials-breakpoint} { border-top-width: 0; }
+	.br-0#{$partials-breakpoint} { border-right-width: 0; }
+	.bb-0#{$partials-breakpoint} { border-bottom-width: 0; }
+	.bl-0#{$partials-breakpoint} { border-left-width: 0; }
+}

@@ -1,0 +1,29 @@
+/*
+
+  Hanging Punctuation
+
+  CSS-only hanging punctuation
+
+*/
+
+@mixin hanging-punctuation {
+	.hapu-all {
+		hanging-punctuation: first allow-end last;
+	}
+
+	.hapu-f {
+		hanging-punctuation: first;
+	}
+
+	.hapu-l {
+		hanging-punctuation: last;
+	}
+
+	.hapu-ae {
+		hanging-punctuation: allow-end;
+	}
+
+	.hapu-fe {
+		hanging-punctuation: force-end;
+	}
+}

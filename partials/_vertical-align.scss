@@ -1,0 +1,14 @@
+/*
+
+   VERTICAL ALIGN
+
+*/
+
+@mixin vertical-align($partials-breakpoint:'') {
+
+	.v-base#{$partials-breakpoint}     { vertical-align: baseline; }
+	.v-mid#{$partials-breakpoint}      { vertical-align: middle; }
+	.v-top#{$partials-breakpoint}      { vertical-align: top; }
+	.v-btm#{$partials-breakpoint}      { vertical-align: bottom; }
+
+}

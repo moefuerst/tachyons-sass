@@ -1,0 +1,11 @@
+/*
+
+   OBJECT FIT
+
+*/
+
+@mixin object-fit($partials-breakpoint:'') {
+	.o-contain#{$partials-breakpoint} { object-fit: contain; }
+	.o-cover#{$partials-breakpoint} { object-fit: 	cover; }
+	.o-scale-down#{$partials-breakpoint} { object-fit: 	scale-down; }
+}

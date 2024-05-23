@@ -1,0 +1,55 @@
+/*
+
+   COORDINATES
+   Docs: http://tachyons.io/docs/layout/position/
+
+   Use in combination with the position module.
+
+   Base:
+     top
+     bottom
+     right
+     left
+
+   Modifiers:
+     -0  = literal value 0
+     -1  = literal value 1
+     -2  = literal value 2
+     --1 = literal value -1
+     --2 = literal value -2
+
+*/
+
+@mixin coordinates($partials-breakpoint:'') {
+	.top-0#{$partials-breakpoint}    { top:    0; }
+	.right-0#{$partials-breakpoint}  { right:  0; }
+	.bottom-0#{$partials-breakpoint} { bottom: 0; }
+	.left-0#{$partials-breakpoint}   { left:   0; }
+
+	.top-1#{$partials-breakpoint}    { top:    1rem; }
+	.right-1#{$partials-breakpoint}  { right:  1rem; }
+	.bottom-1#{$partials-breakpoint} { bottom: 1rem; }
+	.left-1#{$partials-breakpoint}   { left:   1rem; }
+
+	.top-2#{$partials-breakpoint}    { top:    2rem; }
+	.right-2#{$partials-breakpoint}  { right:  2rem; }
+	.bottom-2#{$partials-breakpoint} { bottom: 2rem; }
+	.left-2#{$partials-breakpoint}   { left:   2rem; }
+
+	.top--1#{$partials-breakpoint}    { top:    -1rem; }
+	.right--1#{$partials-breakpoint}  { right:  -1rem; }
+	.bottom--1#{$partials-breakpoint} { bottom: -1rem; }
+	.left--1#{$partials-breakpoint}   { left:   -1rem; }
+
+	.top--2#{$partials-breakpoint}    { top:    -2rem; }
+	.right--2#{$partials-breakpoint}  { right:  -2rem; }
+	.bottom--2#{$partials-breakpoint} { bottom: -2rem; }
+	.left--2#{$partials-breakpoint}   { left:   -2rem; }
+
+	.absolute--fill#{$partials-breakpoint} {
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	}
+}

@@ -1,0 +1,60 @@
+/*
+
+   DISPLAY
+   Docs: http://tachyons.io/docs/layout/display
+
+   Base:
+    d = display
+
+   Modifiers:
+    n     			= none
+    b     			= block
+    ib    			= inline-block
+    f     			= flex
+    if    			= inline-flex
+    g     			= grid
+    ig    			= inline-grid
+    it       		= inline-table
+    t        		= table
+    tc       		= table-cell
+    t-row 	 		= table-row
+    t-column 		= table-column
+    t-column-group 	= table-column-group
+
+*/
+
+@mixin display($partials-breakpoint:'') {
+
+	.dn#{$partials-breakpoint} {         		display: none; }
+	.di#{$partials-breakpoint} {            	display: inline; }
+	.db#{$partials-breakpoint} {            	display: block; }
+	.dib#{$partials-breakpoint} {           	display: inline-block; }
+
+	.df#{$partials-breakpoint},
+	.flex#{$partials-breakpoint} {         		display: flex; }
+	.dif#{$partials-breakpoint},
+	.inline-flex#{$partials-breakpoint} { 		display: inline-flex; }
+
+	.dg#{$partials-breakpoint},
+	.grid#{$partials-breakpoint} {				display: grid;	}
+	.dig#{$partials-breakpoint},
+	.inline-grid#{$partials-breakpoint} {		display: inline-grid;}
+
+	.dit#{$partials-breakpoint} {             	display: inline-table; }
+	.dt#{$partials-breakpoint} {              	display: table; }
+	.dtc#{$partials-breakpoint} {             	display: table-cell; }
+	.dt-row#{$partials-breakpoint} {          	display: table-row; }
+	.dt-row-group#{$partials-breakpoint} {    	display: table-row-group; }
+	.dt-column#{$partials-breakpoint} {       	display: table-column; }
+	.dt-column-group#{$partials-breakpoint} {	display: table-column-group; }
+
+	/*
+	This will set table to full width and then
+	all cells will be equal width
+	*/
+	.dt--fixed#{$partials-breakpoint} {
+	  table-layout: fixed;
+	  width: 100%;
+	}
+
+}

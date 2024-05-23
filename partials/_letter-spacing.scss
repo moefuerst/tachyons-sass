@@ -1,0 +1,20 @@
+/*
+
+   LETTER SPACING
+   Docs: http://tachyons.io/docs/typography/tracking/
+
+*/
+
+$letter-spacings: (
+  "tracked": -.05em,
+  "tracked-tight": .1em,
+  "tracked-mega": .25em
+) !default;
+
+@mixin letter-spacing($partials-breakpoint:'') {
+
+  @each $label, $size in $letter-spacings {
+    .#{$label}#{$partials-breakpoint} { letter-spacing: $size; }
+  }
+
+}

@@ -1,0 +1,206 @@
+/*
+    [ADDON] ANIMATE
+    Base:
+        a = animation duration
+        d = animation delay
+    Modifiers
+        1 = 1st step (150ms)
+    	  2 = 2nd step (300ms)
+    	  3 = 3rd step (450ms)
+    	  4 = 4th step (600ms)
+    	  5 = 5th step (750ms)
+    	  6 = 6th step (900ms)
+        -1 = literal value 1s
+        -2 = literal value 2s
+        -3 = literal value 3s
+    Media Query Extensions:
+        -ns = not-small
+        -m  = medium
+        -l  = large
+*/
+
+@mixin animate($partials-breakpoint:'') {
+
+	/* Animation Play State */
+
+	.pause#{$partials-breakpoint} {
+		animation-play-state: paused;
+	}
+
+	/* Animation Iteration */
+
+	.infinite#{$partials-breakpoint} {
+		animation-iteration-count: infinite;
+	}
+
+	.double#{$partials-breakpoint} {
+		animation-iteration-count: 2;
+	}
+
+	.triple#{$partials-breakpoint} {
+		animation-iteration-count: 3;
+	}
+
+	/* Animation Direction */
+
+	.reverse#{$partials-breakpoint} {
+		animation-direction: reverse;
+	}
+
+	.alternate#{$partials-breakpoint} {
+		animation-direction: alternate;
+	}
+
+	.alternate-reverse#{$partials-breakpoint} {
+		animation-direction: alternate-reverse;
+	}
+
+	/* Animation Duration */
+
+	.a1#{$partials-breakpoint} {
+		animation-duration: 150ms;
+	}
+
+	.a2#{$partials-breakpoint} {
+		animation-duration: 300ms;
+	}
+
+	.a3#{$partials-breakpoint} {
+		animation-duration: 450ms;
+	}
+
+	.a4#{$partials-breakpoint} {
+		animation-duration: 600ms;
+	}
+
+	.a5#{$partials-breakpoint} {
+		animation-duration: 750ms;
+	}
+
+	.a6#{$partials-breakpoint} {
+		animation-duration: 900ms;
+	}
+
+	.a-1#{$partials-breakpoint} {
+		animation-duration: 1s;
+	}
+
+	.a-2#{$partials-breakpoint} {
+		animation-duration: 2s;
+	}
+
+	.a-3#{$partials-breakpoint} {
+		animation-duration: 3s;
+	}
+
+	/* Animation Delay */
+
+	.d1#{$partials-breakpoint} {
+		animation-delay: 150ms;
+	}
+
+	.d2#{$partials-breakpoint} {
+		animation-delay: 300ms;
+	}
+
+	.d3#{$partials-breakpoint} {
+		animation-delay: 450ms;
+	}
+
+	.d4#{$partials-breakpoint} {
+		animation-delay: 600ms;
+	}
+
+	.d5#{$partials-breakpoint} {
+		animation-delay: 750ms;
+	}
+
+	.d6#{$partials-breakpoint} {
+		animation-delay: 900ms;
+	}
+
+	.d-1#{$partials-breakpoint} {
+		animation-delay: 1s;
+	}
+
+	.d-2#{$partials-breakpoint} {
+		animation-delay: 2s;
+	}
+
+	.d-3#{$partials-breakpoint} {
+		animation-delay: 3s;
+	}
+
+	/* EASING BEZIER CURVES via https://gist.github.com/bendc/ac03faac0bf2aee25b49e5fd260a727d */
+
+	.ease#{$partials-breakpoint} {
+		animation-timing-function: ease;
+	}
+
+	.ease-in#{$partials-breakpoint} {
+		animation-timing-function: ease-in;
+	}
+	.ease-in-quad#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	}
+	.ease-in-cubic#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	}
+	.ease-in-quart#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	}
+	.ease-in-quint#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	}
+	.ease-in-expo#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	}
+	.ease-in-circ#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	}
+
+	.ease-out#{$partials-breakpoint} {
+		animation-timing-function: ease-out;
+	}
+	.ease-out-quad#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.ease-out-cubic#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	.ease-out-quart#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+	.ease-out-quint#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	.ease-out-expo#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	}
+	.ease-out-circ#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	.ease-in-out#{$partials-breakpoint} {
+		animation-timing-function: ease-in-out;
+	}
+	.ease-in-out-quad#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	}
+	.ease-in-out-cubic#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+	.ease-in-out-quart#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+	}
+	.ease-in-out-quint#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+	}
+	.ease-in-out-expo#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(1, 0, 0, 1);
+	}
+	.ease-in-out-circ#{$partials-breakpoint} {
+		animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+
+}

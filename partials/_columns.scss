@@ -1,0 +1,25 @@
+/*
+
+  Content Column
+  Docs: http://tachyons.io/docs/layout/content-column
+
+  This sets the set the number of columns that should be created for the content
+  within an element. The column width will be automatically adjusted to accommodate
+  that number.
+
+  Base:
+  cols = columns
+
+*/
+
+$content-columns: 4 !default;
+
+@mixin columns($partials-breakpoint:'') {
+
+  @for $i from 1 through $content-columns {
+	.cols-#{$i}#{$partials-breakpoint}  { column-count: #{$i}; }
+  }
+
+  .cols-nobreak#{$partials-breakpoint} { break-inside: avoid-column; }
+
+}
